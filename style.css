@@ -1,0 +1,490 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  width: 100%;
+  height: 38px;
+}
+
+nav .social-links {
+  display: flex;
+}
+
+nav li {
+  list-style: none;
+  cursor: pointer;
+}
+
+nav li a:hover {
+  background-color: #b6b6b6;
+}
+
+nav li:hover > a {
+  color: #000;
+}
+
+nav li a {
+  color: #fff;
+  padding: 10px 15px;
+}
+
+/* End navbar */
+
+header .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Oswald";
+  height: 220px;
+}
+
+header .title h1 {
+  font-weight: bold;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+header .title p {
+  margin-top: 5px;
+}
+
+header .title span {
+  background-color: #000;
+  color: #fff;
+  padding: 0 7px;
+}
+
+header .image {
+  width: 100%;
+  position: relative;
+}
+
+header .image img {
+  width: 100%;
+  height: 100%;
+}
+
+header .image div {
+  position: absolute;
+  font-family: "Oswald";
+  top: 50%;
+  transform: translateY(-50%);
+  left: 30px;
+}
+
+header .image div h3 {
+  margin-bottom: 15px;
+  font-size: 30px;
+  letter-spacing: 3px;
+  color: #fff;
+  font-weight: 300;
+}
+
+header .image div h1 {
+  font-size: 60px;
+  letter-spacing: 3px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  header .image div h1 {
+    display: none;
+  }
+}
+
+header .image div button {
+  padding: 13px 25px;
+  margin-top: 10px;
+  background-color: #b6b6b6;
+  opacity: 0.7;
+  border: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-family: "Oswald";
+}
+
+header .image div button:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+/* End header */
+
+section {
+  background-color: #f1f1f1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 25px 30px;
+  flex-wrap: wrap;
+  font-family: "Oswald";
+}
+
+/* Post section */
+
+section .post {
+  background-color: #fff;
+  grid-column: span 2;
+}
+
+/************/
+/* Article */
+
+section article {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+section .post .heading {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+section .post .heading h2 {
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+section .post .heading p {
+  font-size: 18px;
+}
+
+section .post .heading span {
+  color: #999999;
+}
+
+section .post .comments {
+  width: 94%;
+}
+
+section .post .comments img {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+section .post .comments p {
+  font-family: sans-serif;
+}
+
+section .post .comments .btns {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+
+section .post .comments .btns button {
+  padding: 10px 15px;
+  font-weight: bold;
+}
+
+section .post .comments .btns button:first-child {
+  border: 1px solid #b6b6b6;
+  background-color: #fff;
+}
+
+section .post .comments .btns button:last-child {
+  background-color: #000;
+  border: none;
+  color: #fff;
+}
+
+section .post .comments .btns button span {
+  padding: 5px 8px;
+  background-color: #fff;
+  color: #000;
+  margin-left: 7px;
+}
+
+section .post .comments .reply {
+  border-top: 1px solid #f1f1f1;
+  display: none;
+}
+
+section .post .comments .btns button:hover {
+  background-color: #b6b6b6;
+  color: #000;
+  cursor: pointer;
+}
+
+section .post .comments .replies {
+  display: flex;
+}
+
+section .post .comments .replies .the-image {
+  width: 90px;
+  height: 90px;
+}
+
+section .post .comments .reply.show {
+  display: block;
+}
+
+section .post .comments .replies {
+  margin: 35px 0;
+}
+
+section .post .comments .replies .info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 40px;
+}
+
+section .post .comments .replies .info h2 {
+  margin-bottom: 10px;
+  font-weight: lighter;
+  font-size: 20px;
+}
+
+section .post .comments .replies .info span {
+  color: #999999;
+  font-size: 16px;
+}
+
+@media (max-width: 991px) {
+  section .post {
+    grid-column: span 3;
+  }
+}
+
+/* Aside section */
+
+section aside {
+  background-color: #f1f1f1;
+}
+
+/***************/
+
+/* Article */
+
+section aside .user {
+  background-color: #000;
+  font-family: "Oswald";
+}
+
+section aside .user img {
+  width: 100%;
+  filter: sepia(50%);
+}
+
+section aside .user div {
+  color: #fff;
+  padding: 15px;
+}
+
+section aside .user div h2,
+p {
+  font-weight: lighter;
+}
+
+section aside .another-info {
+  background-color: #fff;
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+section aside .another-info .main-title {
+  background-color: #000;
+  padding: 15px;
+  color: #fff;
+}
+
+section aside .another-info .main-title h2 {
+  font-weight: lighter;
+}
+
+section aside .another-info .popular-posts {
+  display: flex;
+  padding: 15px;
+}
+
+section aside .another-info .popular-posts:not(:nth-child(2)) {
+  border-top: 2px solid #f1f1f1;
+}
+
+section aside .another-info .popular-posts:hover {
+  background-color: #b6b6b6;
+}
+
+section aside .another-info .popular-posts .img-post {
+  width: 50px;
+  height: 50px;
+}
+
+section aside .another-info .popular-posts .img-post img {
+  width: 100%;
+  height: 100%;
+}
+
+section aside .another-info .popular-posts .posts-info {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section aside .another-info .popular-posts .posts-info h3,
+p {
+  font-weight: lighter;
+}
+
+section aside .another-info .id {
+  margin: 15px;
+  height: 250px;
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+section aside .another-info .tags {
+  padding: 15px;
+}
+
+section aside .another-info .tags span:first-child {
+  background-color: #000;
+  color: #fff;
+}
+
+section aside .another-info .tags span {
+  background-color: #f1f1f1;
+  margin: 10px 3px;
+  padding: 5px;
+  display: inline-block;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+section aside .another-info .characters {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  padding: 15px;
+  background-color: #fff;
+}
+
+section aside .another-info .characters div img {
+  width: 100%;
+  height: 100%;
+}
+
+section aside .another-info .icons {
+  padding: 15px;
+}
+
+section aside .another-info .icons a {
+  color: #000;
+  margin: 2px;
+}
+
+section aside .another-info .icons a:hover {
+  opacity: 0.7;
+}
+
+section aside .another-info .icons a i {
+  font-size: 20px;
+}
+
+section aside .another-info .sub-input {
+  padding: 15px;
+}
+
+section aside .another-info .sub-input input[type="email"] {
+  outline: none;
+  border: 1px solid #b6b6b6;
+  width: 100%;
+  padding: 12px 5px;
+  margin: 15px 0;
+}
+
+section aside .another-info .sub-input input[type="email"]:focus {
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+
+section aside .another-info .sub-input button {
+  width: 100%;
+  padding: 12px 0;
+  background-color: #f44336;
+  outline: none;
+  border: none;
+  color: #fff;
+}
+
+section aside .another-info .sub-input button:hover {
+  background-color: #b6b6b6;
+  color: #000;
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  section aside {
+    grid-column: span 3;
+  }
+}
+/* End aside */
+
+/* Start footer */
+footer {
+  background-color: #b6b6b6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Oswald";
+}
+
+footer span {
+  color: #f44336;
+}
+/* End footer */
+
+/* Scroll */
+.scroll {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #b6b6b6;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.scroll .overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 0;
+  background-color: #f44336;
+  z-index: 2;
+}
+
+.scroll .total {
+  z-index: 9;
+  position: absolute;
+}
+
+.scroll .total i {
+  color: #fff;
+  font-size: 20px;
+}
